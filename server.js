@@ -8,7 +8,8 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 // parse application/json
 app.use(bodyParser.json())
-app.use(require('./server/routes/usuario'))
+    //Configuracion rutas globales
+app.use(require('./server/routes/index'))
 
 mongoose.connect(process.env.urlDB, { useCreateIndex: true, useNewUrlParser: true, useUnifiedTopology: true }, (err, res) => {
     if (err) {

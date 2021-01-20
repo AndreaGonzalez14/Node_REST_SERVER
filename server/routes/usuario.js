@@ -35,6 +35,7 @@ app.get('/usuario', function(req, res) {
 
 app.post('/usuario', function(req, res) {
     let body = req.body;
+    //console.log(body)
     let usuario = new Usuario({
         nombre: body.nombre,
         email: body.email,
